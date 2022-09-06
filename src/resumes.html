@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Resume Page
+        </title>
+        <link rel="stylesheet" href="./styles.css">
+    </head>
+    <body onload="this.addEventListener('keydown', function(event){
+        switch (event.key) {
+            case 'Backspace':
+                window.location = 'index.html';
+                break;
+            case '1':
+                window.location = 'resumes/Dylan Wolf - Professional Resume.pdf';
+                break;
+            case '2':
+                window.location = 'resumes/Dylan Wolf - Academic Resume.pdf';
+                break;
+        }
+    })">
+        <script>
+            function highlight(x) {
+                x.style.color = getComputedStyle(document.querySelector(':root')).getPropertyValue('--foreground');
+            }
+            function unhighlight(x) {
+                x.style.color = getComputedStyle(document.querySelector(':root')).getPropertyValue('--foreground_alt');
+            }
+        </script>
+        <h1>cmd::resumes<span class="blinking">_</span></h1>
+        <div id="termbkg">
+            <p><strong>[user@host ~]$</strong> cat ./resumes.txt</p>
+            <p style="color: var(--foreground_alt);">
+                This page contains pdf and text preview copies of both my academic and professional resumes.
+            </p>
+            <p><strong>[user@host ~]$</strong> echo "Navigation:\n[1] Professional Resume\n[2] Academic Resume\n[bksp] Return"</p>
+            <p style="color: var(--foreground_alt); margin-bottom: -15px;">Navigation:</p>
+            <a href="resumes/Dylan Wolf - Professional Resume.pdf"><p onmouseover="highlight(this);" onmouseleave="unhighlight(this);" style="color: var(--foreground_alt); margin-bottom: -15px;">[1] Professional Resume</p></a>
+            <a href="resumes/Dylan Wolf - Professional Resume.pdf"><p onmouseover="highlight(this);" onmouseleave="unhighlight(this);" style="color: var(--foreground_alt); margin-bottom: -15px;">[2] Academic Resume</p></a>
+            <a href="index.html"><p onmouseover="highlight(this);" onmouseleave="unhighlight(this);" style="color: var(--foreground_alt);">[bksp] Return</p></a>
+        </div>
+    </body>
+</html>
