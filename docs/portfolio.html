@@ -7,7 +7,11 @@
         <link rel="stylesheet" href="./styles.css">
     </head>
     <body onload="this.addEventListener('keydown', function(event){
-        if (event.key == 'Backspace') {window.location = 'index.html'}
+        switch (event.key) {
+            case 'Backspace':
+                window.location = 'index.html';
+                break;
+        }
     })">
         <script>
             function highlight(x) {

@@ -7,7 +7,11 @@
         <link rel="stylesheet" href="./styles.css">
     </head>
     <body onload="this.addEventListener('keydown', function(event){
-        if (event.key == 'Backspace') {window.location = 'index.html'}
+        switch (event.key) {
+            case 'Backspace':
+                window.location = 'index.html';
+                break;
+        }
     })">
         <script>
             function highlight(x) {
@@ -19,9 +23,11 @@
         </script>
         <h1>cmd::summary<span class="blinking">_</span></h1>
         <div id="termbkg">
-            <p><strong>[user@host ~]$</strong> cat ./about_me.txt</p>
+            <p><strong>[user@host ~]$</strong> python about_me.py</p>
             <p style="color: var(--foreground_alt);">
-                Lorem ipsum dolor sit amet
+                > My name is <em style="color: var(--foreground_alt)">Dylan Wolf (they/them)</em> and I'm a senior at Eldorado High School.<br>
+                > I love the field of computer science, and have over 7 years of combined experience with more than 10 programming languages, including scripting, compiled, and even web-oriented languages.<br>
+                > I've used a UNIX-based Operating System as my daily driver since June 2020, and I have tried Ubuntu, LFS, and Arch, as well as many of its derivatives.
             </p>
             <p><strong>[user@host ~]$</strong> echo "Navigation:\n[bksp] Return"</p>
             <p style="color: var(--foreground_alt); margin-bottom: -15px;">Navigation:</p>
