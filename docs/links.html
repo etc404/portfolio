@@ -10,7 +10,7 @@
                 font: 22px/1 "Fira Code", monospace;
             }
             .main {
-                color: #707070;
+                color: #c0b18b;
                 font-size: 30px;
                 height: 100%;
                 width: 100%;
@@ -19,11 +19,14 @@
                 top: 0;
                 overflow-x: hidden;
                 left: 0;
-                background-color: #000000;
+                background-color: #1f1f1f;
             }
-            p {
+            p, h1 {
                 padding-left: 20px;
                 padding-right: 20px;
+            }
+            p {
+                color: #c0b18b;
             }
             .icon {
                 font-size: 50px;
@@ -34,44 +37,51 @@
             }
             .material-symbols-outlined {
                 text-align: center;
-                color: #ffffff;
+                color: #c0b18b;
                 font-variation-settings:
                     'FILL' 1,
                     'wght' 400,
                     'GRAD' 0,
                     'opsz' 48
             }
+            .fancy {
+                color: #c0b18b;
+                transition: 1s;
+                background: none;
+                line-height: 1;
+            }
+            .fancy:hover {
+                box-shadow: inset 0 -3.25em 0 0 #c0b18b;
+                border-color: #c0b18b;
+                color: #1f1f1f;
+            }
         </style>
     </head>
     <body>
         <div class="main">
-            <p style="font-size: 60px;">Links</p>
+            <h1 style="font-size: 60px;">Links</h1>
             <table rules="all">
                 <tbody>
                     <td>
-                        <span class="material-symbols-outlined icon">Code</span>
+                        <a href="https://www.github.com/etc404"><span class="material-symbols-outlined icon">Code</span></a>
                         <p>GitHub</p>
                     </td>
                     <td>
-                        <span class="material-symbols-outlined icon">Send</span>
+                        <a href="https://twitter.com/cyr404"><span class="material-symbols-outlined icon">Send</span></a>
                         <p>Twitter</p>
                     </td> 
                 </tbody>
             </table>
-            <p style="font-size: 60px;">Contact</p>
+            <h1 style="font-size: 60px;">Contact</h1>
             <table rules="all">
                 <tbody>
                     <td>
-                        <span class="material-symbols-outlined icon">Mail</span>
-                        <p>unavailable</p>
-                    </td>
-                    <td>
-                        <span class="material-symbols-outlined icon">Call</span>
-                        <p>unavailable</p>
+                        <a href="mailto: etc404@protonmail.com"><span class="material-symbols-outlined icon">Mail</span></a>
+                        <p>etc404@protonmail.com</p>
                     </td>
                 </tbody>
             </table>
-            <a href="index.html" class="material-symbols-outlined" style="font-size: 50px; position: absolute; bottom: 5px; right: 5px">arrow_back</a>
+            <a href="index.html" class="material-symbols-outlined fancy" style="font-size: 50px; position: absolute; bottom: 5px; right: 5px">arrow_back</a>
         </div>
     </body>
 </html>1

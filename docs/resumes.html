@@ -10,7 +10,7 @@
                 font: 22px/1 "Fira Code", monospace;
             }
             .viewer {
-                color: #707070;
+                color: #c0b18b;
                 font-size: 30px;
                 height: 100%;
                 width: 70%;
@@ -19,14 +19,14 @@
                 top: 0;
                 overflow-x: hidden;
                 left: 0;
-                background-color: #000000;
+                background-color: #1f1f1f;
             }
             p {
                 padding-left: 20px;
                 padding-right: 20px;
             }
             .vl {
-                border-left: 6px solid #707070;
+                border-left: 6px solid #c0b18b;
                 height: 100%;
                 position: absolute;
                 right: 0;
@@ -41,7 +41,7 @@
                 top: 0;
                 overflow-x: hidden;
                 right: 0;
-                background-color: #000000;
+                background-color: #1f1f1f;
             }
             .icon {
                 font-size: 150px;
@@ -53,12 +53,23 @@
             }
             .material-symbols-outlined {
                 text-align: center;
-                color: #ffffff;
+                color: #c0b18b;
                 font-variation-settings:
                     'FILL' 1,
                     'wght' 400,
                     'GRAD' 0,
                     'opsz' 48
+            }
+            .fancy {
+                color: #c0b18b;
+                transition: 1s;
+                background: none;
+                line-height: 1;
+            }
+            .fancy:hover {
+                box-shadow: inset 0 -3.25em 0 0 #c0b18b;
+                border-color: #c0b18b;
+                color: #1f1f1f;
             }
         </style>
         <script>
@@ -69,7 +80,7 @@
                     var split = queryString.split('=');
                     contentID = split[1];
                 } else {
-                    contentID = "acad";
+                    contentID = "prof";
                 }
                 var embed = document.getElementById("embed");
                 var academic = document.getElementById("academic");
@@ -77,16 +88,16 @@
                 var link = document.getElementById("link");
                 switch (contentID) {
                     case 'acad':
-                        embed.src = "resumes/Cream Brown Simple Aesthetic Paper Border.pdf";
-                        academic.style.backgroundColor = "#ffffff";
-                        academic.style.color = "#000000";
-                        link.href = "resumes/Cream Brown Simple Aesthetic Paper Border.pdf";
+                        embed.src = "resumes/NA.pdf";
+                        academic.style.backgroundColor = "#c0b18b";
+                        academic.style.color = "#1f1f1f";
+                        link.href = "resumes/NA.pdf";
                         break;
                     case 'prof':
-                        embed.src = "resumes/Cream Brown Simple Aesthetic Paper Border-1.pdf";
-                        professional.style.backgroundColor = "#ffffff";
-                        professional.style.color = "#000000";
-                        link.href = "resumes/Cream Brown Simple Aesthetic Paper Border-1.pdf";
+                        embed.src = "resumes/Resume.pdf";
+                        professional.style.backgroundColor = "#c0b18b";
+                        professional.style.color = "#1f1f1f";
+                        link.href = "resumes/Resume.pdf";
                         break;
                 }
             }
@@ -103,8 +114,8 @@
                 <a onclick="window.location.replace('resumes.html?v=acad')"><span id="academic" class="material-symbols-outlined icon" style="transform: translate(-50%, -50%);">school</span></a>
                 <a onclick="window.location.replace('resumes.html?v=prof')"><span id="professional" class="material-symbols-outlined icon" style="transform: translate(-50%, 50%);">work</span></a>
             </div>
-            <a href="index.html" class="material-symbols-outlined" style="font-size: 50px; position: absolute; bottom: 5px; right: 70px">arrow_back</a>
-            <a id="link" class="material-symbols-outlined" style="font-size: 50px; position: absolute; bottom: 5px; right: 5px">open_in_new</a>
+            <a href="index.html" class="material-symbols-outlined fancy" style="font-size: 50px; position: absolute; bottom: 5px; right: 70px">arrow_back</a>
+            <a id="link" class="material-symbols-outlined fancy" style="font-size: 50px; position: absolute; bottom: 5px; right: 5px">open_in_new</a>
         </div>
     </body>
 </html>
